@@ -1,0 +1,588 @@
+/*!
+ *
+ * Vanilla
+ * Version 1.0.2
+ * Author: Matt Breckon
+ * Copyright (c) 2013 mattbreckon.com
+ *
+ */
+
+
+
+/* ================================================== *\
+    $Table of Contents
+\* ================================================== */
+
+/*
+
+    $Reset
+    $Normalize
+    $Base
+        @Typography
+        @Headings
+        @Text
+        @Links
+        @Images
+        @Lists
+        @Forms
+    $Structure
+        @Container
+    $Grid
+        @Row
+        @Columns
+    $Layout
+    $Header
+        @Structure
+        @MainNav
+    $Footer
+        @Structure
+        @FooterNav
+    $Modules
+    $Misc
+        @Divider
+    $Plugin
+    $HelperClasses
+        @Text
+        @Spacing
+        @Layout
+        @Visibility
+    $Clearfix
+
+*/
+
+
+
+/* ================================================== *\
+    $Reset
+\* ================================================== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+
+/* ================================================== *\
+    $Normalize
+\* ================================================== */
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 2 */
+    margin: 0; /* 3 */
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+
+/* ================================================== *\
+    $Base
+\* ================================================== */
+
+/* ----------------------------------------
+    @Typography
+---------------------------------------- */
+
+body {
+    font-size: 100%;
+    line-height: 1.4;
+}
+
+
+/* ----------------------------------------
+    @Headings
+---------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {}
+h1, .alpha {}
+h2, .beta {}
+h3, .gamma {}
+h4, .delta {}
+h5, .epsilon {}
+h6, .zeta {}
+
+
+/* ----------------------------------------
+    @Text
+---------------------------------------- */
+
+p {
+    margin-bottom: 10px;
+}
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+.giga {}
+.mega {}
+.kilo {}
+.large {}
+
+.small {}
+.milli {}
+
+
+/* ----------------------------------------
+    @Links
+---------------------------------------- */
+
+a {
+    text-decoration: none;
+}
+
+a:visited {}
+
+a:hover,
+a:focus,
+a:active {}
+
+
+/* ----------------------------------------
+    @Images
+---------------------------------------- */
+
+.img-max { width: 100%; max-width: 100%; }
+.img-flex { max-width: 100%; }
+
+
+/* ----------------------------------------
+    @Lists
+---------------------------------------- */
+
+.l-inline {}
+
+    .l-inline > li {
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+    }
+
+.l-stacked {}
+
+    .l-stacked > li {
+        display: block;
+    }
+
+.l-bullet {
+    list-style: disc;
+}
+
+    .l-bullet > li {
+        display: block;
+        margin-left: 20px;
+    }
+
+
+/* ----------------------------------------
+    @Forms
+---------------------------------------- */
+
+
+
+
+
+/* ================================================== *\
+    $Structure
+\* ================================================== */
+
+/* ----------------------------------------
+    @Container
+---------------------------------------- */
+
+.container {
+    width: 90%;
+    max-width: 71.25em;
+    margin: 0 auto;
+}
+
+    @media screen and (min-width: 30em) {
+        .container {
+            width: 95.91836734693878%;
+        }
+    }
+
+
+
+
+
+/* ================================================== *\
+    $Grid
+\* ================================================== */
+
+/* ----------------------------------------
+    @Rows
+---------------------------------------- */
+
+.row {
+    width: 100%;
+}
+
+
+/* ----------------------------------------
+    ~Columns
+---------------------------------------- */
+
+.row [class*='col'] {
+    width: auto;
+}
+
+@media screen and (min-width: 30em) {
+
+}
+
+@media screen and (min-width: 47.9375em) {
+
+    .row [class*='col'] {
+        float: left;
+        margin-left: 2.04081632653061%;
+    }
+
+    .row [class*='col']:first-child {
+        margin-left: 0;
+    }
+
+    .row .col-1 {
+        width: 6.46258503401361%;
+    }
+
+    .row .col-2 {
+        width: 14.96598639455782%;
+    }
+
+        /* 5 columns */
+        .row .col-2b {
+            width: 18.36734693877551%;
+        }
+
+    .row .col-3 {
+        width: 23.46938775520304%;
+    }
+
+    .row .col-4 {
+        width: 31.97278911564626%;
+    }
+
+    .row .col-5 {
+        width: 40.81632653061225%;
+    }
+
+    .row .col-6 {
+        width: 48.97959183673469%;
+    }
+
+    .row .col-7 {
+        width: 57.14285714285714%;
+    }
+
+    .row .col-8 {
+        width: 65.98639455782313%;
+    }
+
+    .row .col-9 {
+        width: 74.48979591826635%;
+    }
+
+    .row .col-10 {
+        width: 82.99319727891157%;
+    }
+
+    .row .col-11 {
+        width: 91.49659863945578%;
+    }
+
+    .row .col-12 {
+        width: 100%; margin: 0;
+    }
+
+}
+
+
+
+
+
+/* ================================================== *\
+    $Layout
+\* ================================================== */
+
+
+
+/* ================================================== *\
+    $Header
+\* ================================================== */
+
+/* ----------------------------------------
+    @Structure
+---------------------------------------- */
+
+header {}
+
+
+/* ----------------------------------------
+    @Logo
+---------------------------------------- */
+
+.logo {}
+
+
+/* ----------------------------------------
+    @MainNav
+---------------------------------------- */
+
+/*ul*/.main-nav {}
+
+    .main-nav > li {}
+
+
+
+
+
+/* ================================================== *\
+    $Footer
+\* ================================================== */
+
+/* ----------------------------------------
+    @Structure
+---------------------------------------- */
+
+footer {}
+
+
+/* ----------------------------------------
+    @FooterNav
+---------------------------------------- */
+
+/*ul*/.footer-nav {}
+
+    .footer-nav > li {}
+
+
+
+
+
+/* ================================================== *\
+    $OtherModules
+\* ================================================== */
+
+/* ----------------------------------------
+    @Placeholder
+---------------------------------------- */
+
+/* ----------------------------------------
+    -Modifiers
+---------------------------------------- */
+
+
+
+
+
+/* ================================================== *\
+    $Misc
+\* ================================================== */
+
+/* ----------------------------------------
+    @Divider
+---------------------------------------- */
+
+/*span*/.line {
+    display: block;
+    border-top: 1px solid #000;
+}
+
+/* ----------------------------------------
+    @Placeholder
+---------------------------------------- */
+
+/* ================================================== *\
+    $Plugins
+\* ================================================== */
+
+/* ----------------------------------------
+    @Placeholder
+---------------------------------------- */
+
+
+/* ================================================== *\
+    $HelperClasses
+\* ================================================== */
+
+/* ----------------------------------------
+    @Text
+---------------------------------------- */
+
+.txt-em { font-style: italic; }
+.txt-strong { font-weight: bold; }
+.txt-caps { text-transform: uppercase; }
+
+.txt-center { text-align: center; }
+.txt-left { text-align: left; }
+.txt-right { text-align: right; }
+
+
+/* ----------------------------------------
+    @Spacing
+---------------------------------------- */
+
+.mt-0 { margin-top: 0; }
+.mt-5 { margin-top: 5px; }
+.mt-10 { margin-top: 10px; }
+.mt-15 { margin-top: 15px; }
+.mt-20 { margin-top: 20px; }
+.mt-30 { margin-top: 30px; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-5 { margin-bottom: 5px; }
+.mb-10 { margin-bottom: 10px; }
+.mb-15 { margin-bottom: 15px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
+
+.ml-0 { margin-left: 0; }
+.ml-5 { margin-left: 5px; }
+.ml-10 { margin-left: 10px; }
+.ml-15 { margin-left: 15px; }
+.ml-20 { margin-left: 20px; }
+.ml-30 { margin-left: 30px; }
+
+.mr-0 { margin-right: 0; }
+.mr-5 { margin-right: 5px; }
+.mr-10 { margin-right: 10px; }
+.mr-15 { margin-right: 15px; }
+.mr-20 { margin-right: 20px; }
+.mr-30 { margin-right: 30px; }
+
+.m-0 { margin: 0; }
+.p-0 { padding: 0; }
+
+
+/* ----------------------------------------
+    @Layout
+---------------------------------------- */
+
+.float-left { float: left; }
+.float-right { float: right; }
+
+
+/* ----------------------------------------
+    @Visibility
+---------------------------------------- */
+
+.invisible { visibility: hidden; }
+.visibile { visibility: visible; }
+
+.hide { display: none; }
+.show { display: block; }
+
+
+
+
+
+/* ================================================== *\
+    $Clearfix
+\* ================================================== */
+
+.group:before, .group:after,
+.container:before, .container:after,
+.row:before, .row:after,
+.row [class*='col']:before, .row [class*='col']:after {
+    content: " ";
+    display: table;
+}
+
+.group:after,
+.container:after,
+.row:after,
+.row [class*='col']:after {
+    clear: both;
+}
+
+/* For IE 6/7 only */
+.group,
+.container,
+.row,
+.row [class*='col'] {
+    *zoom: 1;
+}
