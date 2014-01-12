@@ -1,9 +1,9 @@
 /*!
  *
  * Vanilla
- * Version 1.0.2
+ * Version 1.0.3
  * Author: Matt Breckon
- * Copyright (c) 2013 mattbreckon.com
+ * Copyright (c) 2014 mattbreckon.com
  *
  */
 
@@ -18,6 +18,7 @@
     $Reset
     $Normalize
     $Base
+        @WebFonts
         @Typography
         @Headings
         @Text
@@ -164,6 +165,11 @@ textarea {
 \* ================================================== */
 
 /* ----------------------------------------
+    @Web Fonts
+---------------------------------------- */
+
+
+/* ----------------------------------------
     @Typography
 ---------------------------------------- */
 
@@ -222,10 +228,23 @@ a:active {}
 
 
 /* ----------------------------------------
+    @Selection
+---------------------------------------- */
+
+::selection {
+    background: #ffb7b7;
+}
+
+::-moz-selection {
+    background: #ffb7b7;
+}
+
+
+/* ----------------------------------------
     @Images
 ---------------------------------------- */
 
-.img-max { width: 100%; max-width: 100%; }
+.img-max { width: 100%; }
 .img-flex { max-width: 100%; }
 
 
@@ -239,6 +258,12 @@ a:active {}
         display: inline-block;
         zoom: 1;
         *display: inline;
+    }
+
+.l-inline-f {}
+
+    .l-inline-f {
+        float: left;
     }
 
 .l-stacked {}
@@ -257,11 +282,6 @@ a:active {}
     }
 
 
-/* ----------------------------------------
-    @Forms
----------------------------------------- */
-
-
 
 
 
@@ -275,13 +295,13 @@ a:active {}
 
 .container {
     width: 90%;
-    max-width: 71.25em;
+    max-width: 60em;
     margin: 0 auto;
 }
 
     @media screen and (min-width: 30em) {
         .container {
-            width: 95.91836734693878%;
+            width: 95%;
         }
     }
 
@@ -398,7 +418,7 @@ a:active {}
     @Structure
 ---------------------------------------- */
 
-header {}
+.header {}
 
 
 /* ----------------------------------------
@@ -428,7 +448,7 @@ header {}
     @Structure
 ---------------------------------------- */
 
-footer {}
+.footer {}
 
 
 /* ----------------------------------------
@@ -534,6 +554,9 @@ footer {}
 .mr-20 { margin-right: 20px; }
 .mr-30 { margin-right: 30px; }
 
+.pt-0 { padding-top: 0; }
+.pb-0 { padding-bottom: 0; }
+
 .m-0 { margin: 0; }
 .p-0 { padding: 0; }
 
@@ -567,7 +590,8 @@ footer {}
 .group:before, .group:after,
 .container:before, .container:after,
 .row:before, .row:after,
-.row [class*='col']:before, .row [class*='col']:after {
+.row [class*='col']:before, .row [class*='col']:after,
+.l-inline-f:before, .l-inline-f:after, {
     content: " ";
     display: table;
 }
@@ -575,7 +599,8 @@ footer {}
 .group:after,
 .container:after,
 .row:after,
-.row [class*='col']:after {
+.row [class*='col']:after,
+.l-inline-f:after {
     clear: both;
 }
 
@@ -583,6 +608,7 @@ footer {}
 .group,
 .container,
 .row,
-.row [class*='col'] {
+.row [class*='col'],
+.l-inline-f {
     *zoom: 1;
 }
