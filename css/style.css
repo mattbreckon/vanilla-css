@@ -299,12 +299,6 @@ a:active {}
     margin: 0 auto;
 }
 
-    @media screen and (min-width: 30em) {
-        .container {
-            width: 95%;
-        }
-    }
-
 
 
 
@@ -591,7 +585,7 @@ a:active {}
 .container:before, .container:after,
 .row:before, .row:after,
 .row [class*='col']:before, .row [class*='col']:after,
-.l-inline-f:before, .l-inline-f:after, {
+.l-inline-f:before, .l-inline-f:after {
     content: " ";
     display: table;
 }
