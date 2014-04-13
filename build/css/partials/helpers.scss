@@ -1,14 +1,13 @@
+/* ================================================== *\
+    Helper Classes
+\* ================================================== */
+
 /* ----------------------------------------
     Text
 ---------------------------------------- */
 
-.txt-em { font-style: italic; }
-.txt-strong { font-weight: bold; }
 .txt-caps { text-transform: uppercase; }
-
 .txt-center { text-align: center; }
-.txt-left { text-align: left; }
-.txt-right { text-align: right; }
 
 
 /* ----------------------------------------
@@ -67,3 +66,23 @@
 
 .hide { display: none; }
 .show { display: block; }
+
+
+/* ----------------------------------------
+    Clearfix
+---------------------------------------- */
+
+.group {
+    /* For IE 6/7 only */
+    *zoom: 1;
+
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}

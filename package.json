@@ -1,7 +1,7 @@
 {
-    "name": "Lord",
+    "name": "Vanilla",
     "version": "0.1.0",
-    "author": "Squeaky Wheel Media",
+    "author": "Matt Breckon",
     "private": true,
 
     "devDependencies": {

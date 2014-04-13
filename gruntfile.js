@@ -23,7 +23,9 @@ module.exports = function(grunt) {
 
         concat: {
             dist: {
-                src: ['build/js/main.js'],
+                src: [
+                    'build/js/main.js'
+                ],
                 dest: 'build/js/scripts.js'
             }
         },
@@ -38,7 +40,7 @@ module.exports = function(grunt) {
         sass: {
             build: {
                 files: {
-                    'assets/css/style.css': 'build/css/style.scss'
+                    'assets/css/style.css': 'build/css/main.scss'
                 }
             }
         },
@@ -59,8 +61,7 @@ module.exports = function(grunt) {
             css: {
                 files: ['build/css/*.scss'],
                 tasks: ['sass']
-            }//,
-            /*
+            }/*,
             js: {
                 files: ['build/js/*.js'],
                 tasks: ['concat']

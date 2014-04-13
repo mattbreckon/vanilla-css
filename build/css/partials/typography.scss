@@ -1,0 +1,107 @@
+// Font Weight
+$light: 300;
+$regular: 400;
+$bold: 700;
+
+// Base Font
+$base-font-family: sans-serif;
+$base-font-size: 100%;
+$base-font-weight: $regular;
+$base-line-height: 1.4;
+$base-font-color: #000;
+
+// Headings
+$header-font-weight: $bold;
+
+
+/* ----------------------------------------
+    Web Fonts
+---------------------------------------- */
+
+
+/* ----------------------------------------
+    Chrome font rending Hack
+---------------------------------------- */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        //font-family: 'fontname';
+        //font-weight: normal;
+        //src: url('../fonts/fontname.svg') format('svg');
+    }
+}
+
+
+/* ----------------------------------------
+    Body
+---------------------------------------- */
+
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    font-weight: $base-font-weight;
+    line-height: $base-line-height;
+    color: $base-font-color;
+}
+
+
+/* ----------------------------------------
+    Headings
+---------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $header-font-weight;
+}
+
+h1,
+.alpha {}
+
+h2,
+.beta {}
+
+h3,
+.gamma {}
+
+h4,
+.delta {}
+
+h5,
+.epsilon {}
+
+h6,
+.zeta {}
+
+
+/* ----------------------------------------
+    Text
+---------------------------------------- */
+
+p {
+    margin-bottom: 10px;
+}
+
+em { font-style: italic; }
+strong { font-weight: $bold; }
+
+.giga {}
+.mega {}
+.kilo {}
+.large {}
+
+.small {}
+.milli {}
+
+
+/* ----------------------------------------
+    Links
+---------------------------------------- */
+
+a {
+    text-decoration: none;
+}
+
+a:visited {}
+
+a:hover,
+a:focus,
+a:active {}
