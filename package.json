@@ -1,18 +1,15 @@
 {
-    "name": "Vanilla",
-    "version": "0.1.0",
-    "author": "Matt Breckon",
-    "private": true,
+  "name": "Vanilla",
+  "version": "1.2.0",
+  "author": "Matt Breckon",
+  "private": true,
 
-    "devDependencies": {
-        "grunt": "~0.4.0",
-        "grunt-contrib-cssmin": "*",
-        "grunt-contrib-sass": "*",
-        "grunt-contrib-concat": "*",
-        "grunt-contrib-uglify": "*",
-        "grunt-contrib-watch": "*",
-        "grunt-cssc": "*",
-        "grunt-htmlhint": "*",
-        "matchdep": "*"
-    }
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "matchdep": "*"
+  }
 }

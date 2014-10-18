@@ -3,11 +3,24 @@
 \* ================================================== */
 
 /* ----------------------------------------
-    Text
+  Text
 ---------------------------------------- */
 
+// Style
 .txt-caps { text-transform: uppercase; }
+
+// Alignment
 .txt-center { text-align: center; }
+.txt-left { text-align: left; }
+.txt-right { text-align: right; }
+
+
+/* ----------------------------------------
+    Images
+---------------------------------------- */
+
+.img-max { width: 100%; }
+.img-flex { max-width: 100%; }
 
 
 /* ----------------------------------------
@@ -50,7 +63,7 @@
 
 
 /* ----------------------------------------
-    Layout
+  Layout
 ---------------------------------------- */
 
 .float-left { float: left; }
@@ -58,7 +71,7 @@
 
 
 /* ----------------------------------------
-    Visibility
+  Visibility
 ---------------------------------------- */
 
 .invisible { visibility: hidden; }
@@ -69,20 +82,20 @@
 
 
 /* ----------------------------------------
-    Clearfix
+  Clearfix
 ---------------------------------------- */
 
 .group {
-    /* For IE 6/7 only */
-    *zoom: 1;
+  /* For IE 6/7 only */
+  *zoom: 1;
 
-    &:before,
-    &:after {
-        content: " ";
-        display: table;
-    }
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
 
-    &:after {
-        clear: both;
-    }
+  &:after {
+    clear: both;
+  }
 }
