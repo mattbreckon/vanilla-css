@@ -17,38 +17,3 @@
 .l-bullet {
   @include l-bullet;
 }
-
-
-.l-inline {
-  @extend .group;
-
-  > li {
-    @extend .group;
-    float: left;
-  }
-}
-
-.l-inline-block {
-  > li {
-    @extend .group;
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-  }
-}
-
-.l-stacked {
-  > li {
-    @extend .group;
-    display: block;
-  }
-}
-
-.l-bullet {
-  list-style: disc;
-
-  > li {
-    @extend .group;
-    margin-left: 15px;
-  }
-}

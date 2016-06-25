@@ -3,11 +3,11 @@
 // ================================================== //
 
 .row {
-  @extend .group;
+  @include clearfix;
   width: 100%;
 
   [class*='col'] {
-    @extend .group;
+    @include clearfix;
     width: auto;
   }
 }

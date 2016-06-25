@@ -1,3 +1,11 @@
 // ================================================== //
-//  Page Elements
+//  Footer Links
 // ================================================== //
+
+/*ul*/.footer-links {
+  @include l-inline;
+
+  > li {
+    @include l-margin-left(10px);
+  }
+}

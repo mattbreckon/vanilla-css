@@ -3,5 +3,9 @@
 // ================================================== //
 
 /*ul*/.main-nav {
-  li {}
+  @include l-inline;
+
+  > li {
+    @include l-margin-left(15px);
+  }
 }
