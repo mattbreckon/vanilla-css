@@ -1,0 +1,10 @@
+{
+  "name": "Vanilla",
+  "version": "1.3.0",
+  "author": "Matt Breckon",
+  "private": true,
+  "devDependencies": {
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt": "^1.0.0"
+  }
+}
