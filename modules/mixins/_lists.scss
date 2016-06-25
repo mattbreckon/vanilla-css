@@ -1,0 +1,56 @@
+// ----------------------------------------
+//  Layout
+// ----------------------------------------
+
+@mixin l-inline {
+  @include clearfix;
+
+  > li {
+    @include clearfix;
+    float: left;
+  }
+}
+
+@mixin l-inline-block {
+  > li {
+    @include clearfix;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+  }
+}
+
+@mixin l-stacked {
+  > li {
+    @include clearfix;
+    display: block;
+  }
+}
+
+@mixin l-bullet {
+  list-style: disc;
+
+  > li {
+    margin-left: 15px;
+  }
+}
+
+// ----------------------------------------
+//  List Margin Helpers
+// ----------------------------------------
+
+@mixin l-margin-top($margin-top) {
+  margin-top: $margin-top;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+@mixin l-margin-left($margin-left) {
+  margin-left: $margin-left;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}

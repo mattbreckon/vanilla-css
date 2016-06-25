@@ -3,6 +3,23 @@
 // ================================================== //
 
 .l-inline {
+  @include l-inline;
+}
+
+.l-inline-block {
+  @include l-inline-block;
+}
+
+.l-stacked {
+  @include l-stacked;
+}
+
+.l-bullet {
+  @include l-bullet;
+}
+
+
+.l-inline {
   @extend .group;
 
   > li {
