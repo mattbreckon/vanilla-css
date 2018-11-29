@@ -1,10 +1,19 @@
 {
-  "name": "Vanilla",
-  "version": "1.3.0",
+  "name": "vanilla-css",
+  "version": "1.0.0",
+  "description": "css boilerplate & conventions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattbreckon/vanillaCSS.git"
+  },
   "author": "Matt Breckon",
-  "private": true,
-  "devDependencies": {
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt": "^1.0.0"
-  }
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattbreckon/vanillaCSS/issues"
+  },
+  "homepage": "https://github.com/mattbreckon/vanillaCSS#readme"
 }

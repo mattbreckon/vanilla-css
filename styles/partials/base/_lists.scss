@@ -1,0 +1,21 @@
+// ================================================== //
+//  Lists
+// ================================================== //
+
+%l-inline { @include l-inline; }
+.l-inline { @extend %l-inline; }
+
+%l-inline-block { @include l-inline-block; }
+.l-inline-block { @extend %l-inline-block; }
+
+%l-stacked { @include l-stacked; }
+.l-stacked { @extend %l-stacked; }
+
+%l-bullet { @include l-bullet; }
+.l-bullet { @extend %l-bullet; }
+
+%l-number { @include l-number; }
+.l-number { @extend %l-number; }
+
+%l-comma { @include l-comma; }
+.l-comma { @extend %l-comma; }

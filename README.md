@@ -1,6 +1,6 @@
-# vanillaCSS
+# vanilla-css
 
-vanillaCSS follows a "BEMv" pattern ("block", "element", "modifier", and "variation").
+vanilla-css follows a "BEMv" pattern ("block", "element", "modifier", and "variation").
 
 #### Block
 
@@ -79,7 +79,7 @@ vanillaCSS follows a "BEMv" pattern ("block", "element", "modifier", and "variat
  * @ Usage: A class intended to add properties to other classes.
  * @ Prefix: parent class (if applicable) and single hyphen
  * @ Example: `.hand-small` added to `.hand` or `.rough-skin` added to '.hand'
- * 
+ *
  * @ Note: Variations are more generic than modifiers and their use case is
  * similar to when you would want to create a mixin. These can be specific
  * to a class or standalone

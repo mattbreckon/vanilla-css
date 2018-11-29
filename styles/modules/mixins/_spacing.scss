@@ -1,0 +1,18 @@
+@mixin spacing($prefix: 'mt', $property: 'margin-top') {
+  @for $i from 0 through 10 {
+    $value: ($i * 5);
+    .#{$prefix}-#{$value} { #{$property}: $value+px; }
+  }
+}
+
+@mixin spacing-vh($horizontal: true, $prefix: 'mh', $property: 'margin') {
+  @for $i from 1 through 10 {
+    $value: ($i * 5);
+
+    @if $horizontal {
+      .#{$prefix}-#{$value} { #{$property}: 0 $value+px; }
+    } @else {
+      .#{$prefix}-#{$value} { #{$property}: $value+px 0; }
+    }
+  }
+}

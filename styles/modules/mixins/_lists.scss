@@ -2,7 +2,14 @@
 //  Layout
 // ----------------------------------------
 
+%list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 @mixin l-inline {
+  @extend %list-reset;
   @include clearfix;
 
   > li {
@@ -12,6 +19,7 @@
 }
 
 @mixin l-inline-block {
+  @extend %list-reset;
   > li {
     @include clearfix;
     display: inline-block;
@@ -21,6 +29,7 @@
 }
 
 @mixin l-stacked {
+  @extend %list-reset;
   > li {
     @include clearfix;
     display: block;
@@ -28,10 +37,39 @@
 }
 
 @mixin l-bullet {
+  @extend %list-reset;
   list-style: disc;
 
   > li {
     margin-left: 15px;
+  }
+}
+
+@mixin l-number {
+  @extend %list-reset;
+  list-style: decimal;
+
+  > li {
+    margin-left: 15px;
+  }
+}
+
+@mixin l-comma {
+  @extend %list-reset;
+  > li {
+    @include l-margin-left(2px);
+    display: inline;
+
+    &:after {
+      content: ',';
+      display: inline;
+    }
+
+    &:last-child {
+      &:after {
+        content: '';
+      }
+    }
   }
 }
 
@@ -52,5 +90,20 @@
 
   &:first-child {
     margin-left: 0;
+  }
+}
+
+@mixin list-spacing($prefix: 'mt', $property: 'margin-top') {
+  @for $i from 1 through 10 {
+    $value: ($i * 5);
+    .l-#{$prefix}-#{$value} {
+      > li {
+        #{$property}: $value+px;
+
+        &:first-child {
+          #{$property}: 0;
+        }
+      }
+    }
   }
 }

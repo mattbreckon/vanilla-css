@@ -1,0 +1,21 @@
+// margin
+.m-auto { margin: auto; }
+.mv-auto { margin: auto 0; }
+.mh-auto { margin: 0 auto; }
+
+@include spacing('mt', 'margin-top');
+@include spacing('mr', 'margin-right');
+@include spacing('mb', 'margin-bottom');
+@include spacing('ml', 'margin-left');
+
+@include spacing-vh(true, 'mh', 'margin');
+@include spacing-vh(false, 'mv', 'margin');
+
+// padding
+@include spacing('pt', 'padding-top');
+@include spacing('pr', 'padding-right');
+@include spacing('pb', 'padding-bottom');
+@include spacing('pl', 'padding-left');
+
+@include spacing-vh(true, 'ph', 'padding');
+@include spacing-vh(false, 'pv', 'padding');
