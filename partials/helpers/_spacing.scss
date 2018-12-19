@@ -1,4 +1,5 @@
 // margin
+.m-0 { margin: 0; }
 .m-auto { margin: auto; }
 .mv-auto { margin: auto 0; }
 .mh-auto { margin: 0 auto; }
@@ -12,6 +13,8 @@
 @include spacing-vh(false, 'mv', 'margin');
 
 // padding
+.p-0 { padding: 0; }
+
 @include spacing('pt', 'padding-top');
 @include spacing('pr', 'padding-right');
 @include spacing('pb', 'padding-bottom');
